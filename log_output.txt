@@ -1,0 +1,14 @@
+[jungyungee] Tue May 20 04:31:13 2025 +0900 fix: usecase description 입출력 형태 맞추어 수정 64b74f2
+[jungyungee] Tue May 20 03:56:51 2025 +0900 feat: analysis class diagram_ver1 추가 7d49e85
+[jungyungee] Mon May 19 18:48:56 2025 +0900 fix: 대여 중 조회 수정 32227da
+[jungyungee] Mon May 19 18:08:48 2025 +0900 fix: 자전거 대여 member 추가 수정 75d0bd0
+[jungyungee] Mon May 19 06:23:04 2025 +0900 feat: 자전거 조회 communication diagram 추가 8a14884
+[jungyungee] Mon May 19 05:38:08 2025 +0900 feat: 자전거 대여  communication diagram 추가 e2e4aa9
+[jungyungee] Mon May 19 05:15:47 2025 +0900 feat: 자전거 등록 communication diagram 추가 9d972bb
+[jungyungee] Mon May 19 04:58:38 2025 +0900 feat: 로그아웃 communication diagram 추가 b63a9ec
+[jungyungee] Mon May 19 04:39:54 2025 +0900 feat: 로그인 communication diagram 추가 2f1e3ca
+[jungyungee] Mon May 19 04:05:15 2025 +0900 feat: 회원가입 communication diagram 추가 e6fcf5f
+[jungyungee] Sun May 18 20:56:10 2025 +0900 feat: 수정된 use case description 업데이트 f7ce705
+[jungyungee] Sun May 18 20:25:08 2025 +0900 feat: 수정된 use case diagram 업데이트 2f1a752
+[jungyungee] Sun May 18 20:09:46 2025 +0900 feat: 수정된 requirement list 업데이트 d00e46a
+[jungyungee] Sun May 18 19:58:18 2025 +0900 chore: 과제 1 업로드 5decf3d
