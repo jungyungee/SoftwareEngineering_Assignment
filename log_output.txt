@@ -1,3 +1,6 @@
+[jungyungee] Tue May 20 13:41:28 2025 +0900 fix: communication diagram 및 analysis diagram entity 일부 수정 a96b666
+[jungyungee] Tue May 20 05:19:01 2025 +0900 chore: diagram 배치 수정 e768122
+[jungyungee] Tue May 20 05:05:59 2025 +0900 chore: log 파일 생성 997a817
 [jungyungee] Tue May 20 04:31:13 2025 +0900 fix: usecase description 입출력 형태 맞추어 수정 64b74f2
 [jungyungee] Tue May 20 03:56:51 2025 +0900 feat: analysis class diagram_ver1 추가 7d49e85
 [jungyungee] Mon May 19 18:48:56 2025 +0900 fix: 대여 중 조회 수정 32227da
