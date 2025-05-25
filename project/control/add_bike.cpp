@@ -22,5 +22,5 @@ void AddBikeControl::AddBike(std::istream& in, std::ostream& out) {
 
   Bike new_bike(id, bikename);
   bike_repo_.AddBike(new_bike);
-  out << "> " << id << " " << bikename << "\n";
+  out << "> " << id << " " << bikename << "\n\n";
 }

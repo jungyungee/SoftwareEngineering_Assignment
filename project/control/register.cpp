@@ -13,5 +13,5 @@ void Register::RegisterMember(std::istream& in, std::ostream& out) {
 
   out << "> " << new_member.GetId() << " "
       << new_member.GetPassword() << " "
-      << new_member.GetPhoneNumber() << std::endl;
+      << new_member.GetPhoneNumber() << "\n" << std::endl;
 }

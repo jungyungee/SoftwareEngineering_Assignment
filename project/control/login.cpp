@@ -20,14 +20,14 @@ void LoginControl::Login(std::istream& in, std::ostream& out) {
 
   if (id == "admin" && password == "admin") {
     session_.Login(&manager_);
-    out << "> " << id << " " << password << "\n";
+    out << "> " << id << " " << password << "\n\n";
     return;
   }
 
   Member* member = repo_.FindById(id);
   if (member && member->GetPassword() == password) {
     session_.Login(member);
-    out << "> " << id << " " << password << "\n";
+    out << "> " << id << " " << password << "\n\n";
     return;
   }
   return;

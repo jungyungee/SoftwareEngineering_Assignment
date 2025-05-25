@@ -106,7 +106,7 @@ void doTask() {
       case 6: {  // 종료
         switch (menu_level_2) {
           case 1: {
-            out_fp << "6.1. 종료\n";
+            out_fp << "6.1. 종료";
             is_program_exit = true;
             break;
           }

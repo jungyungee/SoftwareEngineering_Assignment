@@ -21,5 +21,5 @@ void BikeRentalControl::RentBike(std::istream& in, std::ostream& out) {
   bike->Rent();
   member->AddToRentedList(bike_id);
 
-  out << "> " << bike->GetId() << " " << bike->GetBikeName() << "\n";
+  out << "> " << bike->GetId() << " " << bike->GetBikeName() << "\n\n";
 }

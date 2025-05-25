@@ -25,4 +25,5 @@ void RentedBikeControl::ShowRentedBikes(std::istream& in, std::ostream& out) {
       out << "> " << bike->GetId() << " " << bike->GetBikeName() << "\n";
     }
   }
+  out << "\n";
 }
