@@ -11,6 +11,13 @@ void LoginControl::Login(std::istream& in, std::ostream& out) {
   std::string id, password;
   in >> id >> password;
 
+  if (in.fail()) {
+    in.clear();
+    std::string dummy;
+    std::getline(in, dummy);
+    return;
+  }
+
   if (id == "admin" && password == "admin") {
     session_.Login(&manager_);
     out << "> " << id << " " << password << "\n";
@@ -21,5 +28,7 @@ void LoginControl::Login(std::istream& in, std::ostream& out) {
   if (member && member->GetPassword() == password) {
     session_.Login(member);
     out << "> " << id << " " << password << "\n";
+    return;
   }
+  return;
 }

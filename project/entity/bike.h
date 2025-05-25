@@ -1,29 +1,20 @@
-#ifndef PROJECT_ENTITY_BIKE_H_
-#define PROJECT_ENTITY_BIKE_H_
+// bike.h
+#ifndef BIKE_H_
+#define BIKE_H_
 
 #include <string>
 
 class Bike {
  public:
-  Bike(const std::string& id, const std::string& model, const std::string& type);
+  Bike(const std::string& id, const std::string& bikename)
+      : id_(id), bikename_(bikename) {}
 
-  // Getter
-  std::string GetId() const;
-  std::string GetModel() const;
-  std::string GetType() const;
-  std::string GetStatus() const;
-
-  // Setter
-  void SetStatus(const std::string& status);
-
-  // 상태 확인
-  bool IsAvailable() const;
+  std::string GetId() const { return id_; }
+  std::string Getbikename() const { return bikename_; }
 
  private:
   std::string id_;
-  std::string model_;
-  std::string type_;    // 일반 / 전기
-  std::string status_;  // 사용 가능 / 대여 중 / 수리 중
+  std::string bikename_;
 };
 
-#endif  // PROJECT_ENTITY_BIKE_H_
+#endif  // BIKE_H_

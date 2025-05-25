@@ -5,15 +5,18 @@
 #include "control/register.h"
 #include "control/login.h"
 #include "control/logout.h"
+#include "control/add_bike.h"
 #include "boundary/register_ui.h"
 #include "boundary/login_ui.h"
 #include "boundary/logout_ui.h"
+#include "boundary/add_bike_ui.h"
 
 extern std::ifstream in_fp;
 extern std::ofstream out_fp;
 
 void doTask() {
   MemberRepository member_repo;
+  BikeRepository bike_repo;
   Session session;
   Manager manager;
 
@@ -51,6 +54,19 @@ void doTask() {
             LogoutControl logout_control(session);
             LogoutUI logout_ui(&logout_control);
             logout_ui.start_interface(out_fp);
+            break;
+          }
+        }
+        break;
+      }
+
+      case 3: { // 자전거 등록
+        switch (menu_level_2) {
+          case 1: {
+            out_fp << "3.1. 자전거 등록\n";
+            AddBikeControl add_bike_control(bike_repo, session);
+            AddBikeUI add_bike_ui(&add_bike_control);
+            add_bike_ui.start_interface(in_fp, out_fp);
             break;
           }
         }
