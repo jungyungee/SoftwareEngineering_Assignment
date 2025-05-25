@@ -1,17 +1,16 @@
 #include "system_user.h"
+#include <string> 
 
-SystemUser::SystemUser(const string& id, const string& password)
+//생성자
+SystemUser::SystemUser(const std::string& id, const std::string& password)
     : id_(id), password_(password) {}
 
-string SystemUser::GetId() const {
+std::string SystemUser::GetId() const {
   return id_;
 }
 
-string SystemUser::GetPassword() const {
+std::string SystemUser::GetPassword() const {
   return password_;
 }
 
-void SystemUser::ClearSession() {
-  id_.clear();
-  password_.clear();
-}
+void SystemUser::Clea

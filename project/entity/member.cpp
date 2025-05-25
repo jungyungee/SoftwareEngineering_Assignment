@@ -1,16 +1,19 @@
 #include "member.h"
+#include <string>
+#include <vector>
 
-Member::Member(const string& id, const string& password, const string& phone_number)
+// 생성자
+Member::Member(const std::string& id, const std::string& password, const std::string& phone_number)
     : SystemUser(id, password), phone_number_(phone_number) {}
 
-string Member::GetPhoneNumber() const {
+// 전화번호 반환
+std::string Member::GetPhoneNumber() const {
   return phone_number_;
 }
 
-void Member::AddToRentedList(const string& bike_id) {
+// 자전거 ID 추가
+void Member::AddToRentedList(const std::string& bike_id) {
   rented_bike_ids_.push_back(bike_id);
 }
 
-vector<string> Member::GetRentedList() const {
-  return rented_bike_ids_;
-}
+// 대여 �

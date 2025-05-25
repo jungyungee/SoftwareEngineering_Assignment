@@ -1,9 +1,9 @@
-// register.cpp
 #include "register.h"
 
+//생성자
 Register::Register(MemberRepository& repo) : repo_(repo) {}
 
-// 회원 정보를 입력 받아 Member 객체를 생성하고 출력한다.
+// 입력받은 정보로 회원을 생성하고 저장소에 추가, 결과 출력
 void Register::RegisterMember(std::istream& in, std::ostream& out) {
   std::string id, password, phone_number;
   in >> id >> password >> phone_number;
@@ -13,5 +13,6 @@ void Register::RegisterMember(std::istream& in, std::ostream& out) {
 
   out << "> " << new_member.GetId() << " "
       << new_member.GetPassword() << " "
-      << new_member.GetPhoneNumber() << "\n" << std::endl;
+      << new_member.GetPhoneNumber() << "\n" 
+      << std::endl;
 }

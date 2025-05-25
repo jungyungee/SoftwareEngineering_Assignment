@@ -4,18 +4,24 @@
 #include <iostream>
 #include "../control/register.h"
 
-using namespace std;
-
-// RegisterUI 클래스는 회원가입 메뉴에 대한 UI 처리를 담당한다.
+/**
+ * @brief 회원가입 UI 클래스
+ *        사용자 입력을 받아 control에
+ */
 class RegisterUI {
  public:
-  RegisterUI(Register* control) : control_(control) {}
+  /**
+   * @brief 생성자
+   */
+  explicit RegisterUI(Register* control) : control_(control) {}
 
-  // 회원가입 메뉴 실행 함수
-  void start_interface(istream& in, ostream& out);
+  /**
+   * @brief UI 실행 함수: 입력을 받아 회원가입 처리
+   */
+  void start_interface(std::istream& in, std::ostream& out);
 
  private:
-  Register* control_;
+  Register* control_;  // control 계층 포인터
 };
 
 #endif  // REGISTER_UI_H_

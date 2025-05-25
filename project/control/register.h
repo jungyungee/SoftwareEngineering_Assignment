@@ -1,4 +1,3 @@
-// register.h
 #ifndef REGISTER_CONTROL_H_
 #define REGISTER_CONTROL_H_
 
@@ -6,14 +5,23 @@
 #include "../entity/member.h"
 #include "../entity/member_repository.h"
 
-// 클래스 이름을 Register로 정의
+/**
+ * @brief 회원 가입을 처리하는 control 클래스
+ */
 class Register {
  public:
-  Register(MemberRepository& repo);  // 생성자에서 repository 주입
+  /**
+   * @brief 생성자
+   */
+  Register(MemberRepository& repo);
+
+  /**
+   * @brief 회원가입: 입력 받아 회원 생성 후 저장 및 출력
+   */
   void RegisterMember(std::istream& in, std::ostream& out);
 
  private:
-  MemberRepository& repo_;  // DB 대신 MemberRepository 참조
+  MemberRepository& repo_; // 회원 저장소 참조
 };
 
 #endif  // REGISTER_CONTROL_H_

@@ -5,14 +5,16 @@
 #include <iostream>
 #include <string>
 
+// 생성자
 AddBikeControl::AddBikeControl(BikeRepository& bike_repo, Session& session)
     : bike_repo_(bike_repo), session_(session) {}
 
+// 자전거 등록-관리자만
 void AddBikeControl::AddBike(std::istream& in, std::ostream& out) {
   std::string id, bikename;
   in >> id >> bikename;
 
-  // 로그인된 사용자 확인
+  // 로그인된 사용자가 관리자일 경우에만 등록 가능
   SystemUser* user = session_.GetLoggedInUser();
   Manager* manager = dynamic_cast<Manager*>(user);
   if (manager == nullptr) {

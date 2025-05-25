@@ -1,22 +1,25 @@
 #ifndef MEMBER_H_
 #define MEMBER_H_
 
-#include "system_user.h"
 #include <string>
 #include <vector>
+#include "system_user.h"
 
+/**
+ * @brief 일반 회원 클래스
+ *        사용자 ID/비밀번호 외에 전화번호와 대여한 자전거 목록을 보관
+ */
 class Member : public SystemUser {
  public:
-  Member(const string& id, const string& password, const string& phone_number);
+  /**
+   * @brief Member 생성자
+   */
+  Member(const std::string& id, const std::string& password, const std::string& phone_number);
 
-  string GetPhoneNumber() const;
-  
-  void AddToRentedList(const string& bike_id);
-  vector<string> GetRentedList() const;
+  /**
+   * @brief 회원 전화번호 반환
+   */
+  std::string GetPhoneNumber() const;
 
- private:
-  string phone_number_;
-  vector<string> rented_bike_ids_;
-};
-
-#endif  // MEMBER_H_
+  /**
+   * @bri

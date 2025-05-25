@@ -15,13 +15,4 @@ void doTask();  // 메뉴 파싱 담당
 
 int main() {
   // 파일 입출력을 위한 초기화
-  in_fp.open(INPUT_FILE_NAME);
-  out_fp.open(OUTPUT_FILE_NAME);
-
-  doTask();
-
-  in_fp.close();
-  out_fp.close();
-  
-  return 0;
-}
+  in_fp.op
