@@ -17,4 +17,7 @@ class SystemUser {
 
  protected:
   string id_;
-  string passwo
+  string password_;
+};
+
+#endif  // SYSTEM_USER_H_

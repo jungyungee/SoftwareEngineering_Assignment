@@ -1,17 +1,24 @@
 #include <fstream>
+#include "entity/member_repository.h"
+#include "entity/session.h"
+#include "entity/manager.h"
 #include "control/register.h"
-//#include "control_login.h"
-//#include "control_logout.h"
-//#include "add_bike_control.h"
-//#include "bike_rental_control.h"
-//#include "rented_bike_control.h"
+#include "control/login.h"
+#include "control/logout.h"
+#include "boundary/register_ui.h"
+#include "boundary/login_ui.h"
+#include "boundary/logout_ui.h"
 
 extern std::ifstream in_fp;
 extern std::ofstream out_fp;
 
 void doTask() {
+  MemberRepository member_repo;
+  Session session;
+  Manager manager;
+
   int menu_level_1 = 0, menu_level_2 = 0;
-  int is_program_exit = 0;
+  bool is_program_exit = false;
 
   while (!is_program_exit) {
     in_fp >> menu_level_1 >> menu_level_2;
@@ -20,74 +27,46 @@ void doTask() {
       case 1: {  // 회원가입
         switch (menu_level_2) {
           case 1: {
-            out_fp << "1.1.\n";
-            Register rc;
-            rc.RegisterMember(in_fp, out_fp);
+            out_fp << "1.1. 회원가입\n";
+            Register reg(member_repo);
+            RegisterUI ui(&reg);
+            ui.start_interface(in_fp, out_fp);
             break;
           }
         }
         break;
       }
-/*       case 2: {  // 로그인 / 로그아웃
+
+      case 2: {  // 로그인
         switch (menu_level_2) {
           case 1: {
-            out_fp << "2.1.\n";
-            LoginControl lc;
-            lc.login(in_fp, out_fp);
+            out_fp << "2.1. 로그인\n";
+            LoginControl login_control(member_repo, session, manager);
+            LoginUI login_ui(&login_control);
+            login_ui.start_interface(in_fp, out_fp);
             break;
           }
           case 2: {
-            out_fp << "2.2.\n";
-            LogoutControl loc;
-            loc.logout(in_fp, out_fp);
+            out_fp << "2.2. 로그아웃\n";
+            LogoutControl logout_control(session);
+            LogoutUI logout_ui(&logout_control);
+            logout_ui.start_interface(out_fp);
             break;
           }
         }
         break;
       }
-      case 3: {  // 자전거 등록
-        switch (menu_level_2) {
-          case 1: {
-            out_fp << "3.1.\n";
-            AddBikeControl abc;
-            abc.addBike(in_fp, out_fp);
-            break;
-          }
-        }
-        break;
-      }
-      case 4: {  // 자전거 대여
-        switch (menu_level_2) {
-          case 1: {
-            out_fp << "4.1.\n";
-            BikeRentalControl brc;
-            brc.rentBike(in_fp, out_fp);
-            break;
-          }
-        }
-        break;
-      }
-      case 5: {  // 대여중인 자전거 조회
-        switch (menu_level_2) {
-          case 1: {
-            out_fp << "5.1.\n";
-            RentedBikeControl rbc;
-            rbc.showRentedBikes(in_fp, out_fp);
-            break;
-          }
-        }
-        break;
-      }
+
       case 6: {  // 종료
         switch (menu_level_2) {
           case 1: {
-            out_fp << "6.1.\n";
-            is_program_exit = 1;
+            out_fp << "6.1. 종료\n";
+            is_program_exit = true;
             break;
           }
         }
         break;
-      } */
-    }  // switch(menu_level_1)
-  }  // while
+      }
+    }
+  }
 }

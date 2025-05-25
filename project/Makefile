@@ -7,11 +7,15 @@ SRC = \
     main.cpp \
     do_task.cpp \
     control/register.cpp \
+    control/login.cpp \
+    control/logout.cpp \
     boundary/register_ui.cpp \
+    boundary/login_ui.cpp \
+    boundary/logout_ui.cpp \
     entity/system_user.cpp \
     entity/member.cpp \
+    entity/member_repository.cpp \
     entity/manager.cpp \
-    entity/database.cpp \
     entity/bike.cpp
 
 OBJ = $(SRC:.cpp=.o)
