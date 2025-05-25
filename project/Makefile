@@ -10,9 +10,12 @@ SRC = \
     control/login.cpp \
     control/logout.cpp \
     control/add_bike.cpp \
+    control/bike_rental.cpp \
     boundary/register_ui.cpp \
     boundary/login_ui.cpp \
     boundary/logout_ui.cpp \
+    boundary/add_bike_ui.cpp \
+    boundary/bike_rental_ui.cpp \
     entity/system_user.cpp \
     entity/member.cpp \
     entity/member_repository.cpp \

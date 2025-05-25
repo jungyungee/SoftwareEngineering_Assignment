@@ -2,14 +2,12 @@
 #define ADD_BIKE_UI_H_
 
 #include "../control/add_bike.h"
+#include <iostream>
 
 class AddBikeUI {
  public:
-  AddBikeUI(AddBikeControl* control) : control_(control) {}
-
-  void start_interface(std::istream& in, std::ostream& out) {
-    control_->AddBike(in, out);
-  }
+  AddBikeUI(AddBikeControl* control);  // 선언만
+  void start_interface(std::istream& in, std::ostream& out);  // 선언만
 
  private:
   AddBikeControl* control_;
