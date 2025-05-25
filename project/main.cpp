@@ -17,4 +17,5 @@ int main() {
 
   in_fp.close();
   out_fp.close();
-  r
+  return 0;
+}

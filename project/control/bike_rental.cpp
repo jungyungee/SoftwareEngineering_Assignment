@@ -13,7 +13,7 @@ void BikeRentalControl::RentBike(std::istream& in, std::ostream& out) {
   std::string bike_id;
   in >> bike_id;
   
-  if (!member) return;  // 관리자면 리턴
+  if (!member) return;  // 관리자거나 로그인 안한 경우 리턴
 
   Bike* bike = bike_repo_.FindById(bike_id);
   if (!bike || bike->IsRented()) return;  // 없거나 이미 대여 중이면 무시
@@ -21,5 +21,5 @@ void BikeRentalControl::RentBike(std::istream& in, std::ostream& out) {
   bike->Rent();
   member->AddToRentedList(bike_id);
 
-  out << "> " << bike_id << "\n";
+  out << "> " << bike->GetId() << " " << bike->GetBikeName() << "\n";
 }

@@ -7,11 +7,13 @@
 #include "control/logout.h"
 #include "control/add_bike.h"
 #include "control/bike_rental.h"
+#include "control/rented_bike.h"
 #include "boundary/register_ui.h"
 #include "boundary/login_ui.h"
 #include "boundary/logout_ui.h"
 #include "boundary/add_bike_ui.h"
 #include "boundary/bike_rental_ui.h"
+#include "boundary/rented_bike_ui.h"
 
 extern std::ifstream in_fp;
 extern std::ofstream out_fp;
@@ -82,6 +84,19 @@ void doTask() {
             BikeRentalControl bike_rental_control(bike_repo, session);
             BikeRentalUI bike_rental_ui(&bike_rental_control);
             bike_rental_ui.start_interface(in_fp, out_fp);
+            break;
+          }
+        }
+        break;
+      }
+
+      case 5: {  // 대여 자전거 조회
+        switch (menu_level_2) {
+          case 1: {
+            out_fp << "5.1. 대여 자전거 조회\n";
+            RentedBikeControl rented_bike_control(bike_repo, member_repo, session);
+            RentedBikeUI rented_bike_ui(&rented_bike_control);
+            rented_bike_ui.start_interface(in_fp, out_fp);
             break;
           }
         }

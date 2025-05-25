@@ -11,5 +11,10 @@
 2.1. 로그인
 > kim pwdpwd
 4.1. 자전거 대여
-> b2
+> b1 bikeMaker
+4.1. 자전거 대여
+> b2 bikeProducer
+5.1. 대여 자전거 조회
+> b1 bikeMaker
+> b2 bikeProducer
 6.1. 종료
