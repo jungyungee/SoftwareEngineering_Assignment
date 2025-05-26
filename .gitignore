@@ -1,0 +1,14 @@
+# Visual Studio garbage
+.vs/
+*.VC.db
+*.vscode/
+*.suo
+*.user
+*.pdb
+*.exe
+*.obj
+*.ipch
+*.log
+x64/
+Debug/
+Release/

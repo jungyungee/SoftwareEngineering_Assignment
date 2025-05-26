@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\entity">
+      <UniqueIdentifier>{224ff4e1-b1f2-450d-b680-e82776f157da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\control">
+      <UniqueIdentifier>{5d1c2f33-6164-4f38-bbe0-06cc156f306a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\entity">
+      <UniqueIdentifier>{08c63383-cccc-46b7-be13-e242d7bf1b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\control">
+      <UniqueIdentifier>{c3af9c8a-6aad-4322-803e-95a321baad27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\boundary">
+      <UniqueIdentifier>{ac685064-22f6-45ca-8dd1-84d2a6db8412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\boundary">
+      <UniqueIdentifier>{f2a93bb4-87b8-4171-a100-deca0212a92e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="do_task.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="system_user.cpp">
+      <Filter>소스 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="session.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="member_repository.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="member_repository.cpp">
+      <Filter>소스 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="member.cpp">
+      <Filter>소스 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="manager.cpp">
+      <Filter>소스 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="bike_repository.cpp">
+      <Filter>소스 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="bike.cpp">
+      <Filter>소스 파일\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="logout.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="register.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="logout.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="add_bike.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="bike_rental.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="rented_bike.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="rented_bike_ui.cpp">
+      <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="register_ui.cpp">
+      <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="logout_ui.cpp">
+      <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="login_ui.cpp">
+      <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="bike_rental_ui.cpp">
+      <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="add_bike_ui.cpp">
+      <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="system_user.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="member.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="manager.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="bike.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="bike_repository.h">
+      <Filter>헤더 파일\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="register.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="login.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="add_bike.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="bike_rental.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="controls.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="rented_bike.h">
+      <Filter>헤더 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="register_ui.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="login_ui.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="logout_ui.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="rented_bike_ui.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="boundaries.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="bike_rental_ui.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="add_bike_ui.h">
+      <Filter>헤더 파일\boundary</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
