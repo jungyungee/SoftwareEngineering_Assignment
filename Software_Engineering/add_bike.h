@@ -4,6 +4,7 @@
 
 #include "bike_repository.h"
 #include "session.h"
+#include "bike.h"
 
 
 /**
@@ -17,9 +18,9 @@ public:
 	AddBikeControl(BikeRepository& bike_repo, Session& session);
 
 	/**
-	 * @brief 자전거 등록 처리 (관리자만)
+	 * @brief 입력값 받고 등록, 성공 시 Bike 포인터 반환 (관리자만)
 	 */
-	void AddBike(std::istream& in, std::ostream& out);
+	Bike* AddBike(const std::string& id, const std::string& bikename);
 
 private:
 	BikeRepository& bike_repo_;   // 자전거 저장소 참조

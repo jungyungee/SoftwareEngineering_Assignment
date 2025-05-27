@@ -5,6 +5,7 @@
 #include "bike_repository.h"
 #include "session.h"
 #include "member.h"
+#include "bike.h"
 
 /**
  * @brief 자전거 대여를 처리하는 control 클래스
@@ -18,9 +19,9 @@ public:
 	BikeRentalControl(BikeRepository& bike_repo, Session& session);
 
 	/**
-	 * @brief 자전거 대여 처리: 입력받은 ID로 대여 가능 여부 확인 후 대여
+	 * @brief 자전거 대여 처리: 성공 시 Bike 포인터 반환, 실패 시 nullptr
 	 */
-	void RentBike(std::istream& in, std::ostream& out);
+	Bike* RentBike(const std::string& bike_id);
 
 private:
 	BikeRepository& bike_repo_;   // 자전거 저장소 참조

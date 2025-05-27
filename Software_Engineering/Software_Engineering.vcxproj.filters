@@ -66,9 +66,6 @@
     <ClCompile Include="logout.h">
       <Filter>헤더 파일\control</Filter>
     </ClCompile>
-    <ClCompile Include="register.cpp">
-      <Filter>소스 파일\control</Filter>
-    </ClCompile>
     <ClCompile Include="login.cpp">
       <Filter>소스 파일\control</Filter>
     </ClCompile>
@@ -101,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="add_bike_ui.cpp">
       <Filter>소스 파일\boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="register.cpp">
+      <Filter>소스 파일\control</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ public:
 	/**
 	  * @brief 새 회원을 저장소에 추가
 	  */
-	void AddMember(const Member& member);
+	void AddMember(Member* member);
 
 	/**
 	 * @brief ID로 회원을 검색
@@ -21,7 +21,7 @@ public:
 	Member* FindById(const std::string& id);
 
 private:
-	std::vector<Member> members_; // 저장된 회원 목록
+	std::vector<Member*> members_; // 저장된 회원 목록
 };
 
 #endif  // MEMBER_REPOSITORY_H_

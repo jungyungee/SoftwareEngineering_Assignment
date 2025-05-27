@@ -1,10 +1,11 @@
-#pragma once
 #ifndef LOGIN_CONTROL_H_
 #define LOGIN_CONTROL_H_
 
+#include <string>
 #include "member_repository.h"
 #include "session.h"
 #include "manager.h"
+#include "system_user.h"
 
 /**
  * @brief 로그인 처리를 담당하는 control 클래스
@@ -13,16 +14,13 @@ class LoginControl {
 public:
 	/**
 	 * @brief 생성자
-	 * @param repo 회원 저장소
-	 * @param session 현재 세션
-	 * @param manager 관리자 객체 참조
 	 */
 	LoginControl(MemberRepository& repo, Session& session, Manager& manager);
 
 	/**
 	 * @brief 입력된 ID/비밀번호로 로그인 처리
 	 */
-	void Login(std::istream& in, std::ostream& out);
+	SystemUser* Login(const std::string& id, const std::string& password);
 
 private:
 	MemberRepository& repo_;    // 회원 저장소 참조

@@ -4,6 +4,16 @@
 RentedBikeUI::RentedBikeUI(RentedBikeControl* control) : control_(control) {}
 
 // UI 실행: 입력을 control로 전달
-void RentedBikeUI::start_interface(std::istream& in, std::ostream& out) {
-	control_->ShowRentedBikes(in, out);
+void RentedBikeUI::start_interface(std::ostream& out) {
+	auto bikes = control_->GetRentedBikes();
+
+	if (bikes.empty()) {
+		out << "> 대여중인 자전거가 없습니다.\n\n";
+		return;
+	}
+
+	for (auto* bike : bikes) {
+		out << "> " << bike->GetId() << " " << bike->GetBikeName() << "\n";
+	}
+	out << "\n";
 }

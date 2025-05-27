@@ -1,7 +1,8 @@
-#pragma once
 #ifndef LOGOUT_UI_H_
 #define LOGOUT_UI_H_
 
+
+#include <iostream>
 #include "logout.h"
 
 /**
@@ -13,7 +14,7 @@ public:
 	/**
 	  * @brief 생성자
 	  */
-	explicit LogoutUI(LogoutControl* control) : control_(control) {}
+	explicit LogoutUI(LogoutControl* control);
 
 	/**
 	 * @brief 로그아웃 UI 실행

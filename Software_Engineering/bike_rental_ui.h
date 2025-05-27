@@ -14,7 +14,7 @@ public:
 	/**
 	 * @brief 생성자
 	 */
-	explicit BikeRentalUI(BikeRentalControl* control) : control_(control) {}
+	explicit BikeRentalUI(BikeRentalControl* control);
 
 	/**
 	 * @brief 대여 메뉴 실행

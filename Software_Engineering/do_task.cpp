@@ -95,7 +95,7 @@ void doTask() {
                 out_fp << "5.1. 자전거 대여 리스트\n";
                 RentedBikeControl rented_bike_control(bike_repo, member_repo, session);
                 RentedBikeUI rented_bike_ui(&rented_bike_control);
-                rented_bike_ui.start_interface(in_fp, out_fp);
+                rented_bike_ui.start_interface(out_fp);
                 break;
             }
             }

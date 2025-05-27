@@ -18,9 +18,9 @@ public:
 	RentedBikeControl(BikeRepository& bike_repo, MemberRepository& member_repo, Session& session);
 
 	/**
-	 * @brief 현재 로그인된 회원의 대여 자전거 목록 출력
+	 * @brief 현재 로그인된 회원의 대여 자전거 목록을 반환
 	 */
-	void ShowRentedBikes(std::istream& in, std::ostream& out);
+	std::vector<Bike*> GetRentedBikes();
 
 private:
 	BikeRepository& bike_repo_;       // 자전거 저장소

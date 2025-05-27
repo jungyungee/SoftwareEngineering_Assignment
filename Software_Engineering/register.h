@@ -1,8 +1,6 @@
-#pragma once
 #ifndef REGISTER_CONTROL_H_
 #define REGISTER_CONTROL_H_
 
-#include <iostream>
 #include "member.h"
 #include "member_repository.h"
 
@@ -17,9 +15,9 @@ public:
 	Register(MemberRepository& repo);
 
 	/**
-	 * @brief 회원가입: 입력 받아 회원 생성 후 저장 및 출력
+	 * @brief 회원가입: 입력 받아 회원 생성 후 저장
 	 */
-	void RegisterMember(std::istream& in, std::ostream& out);
+	Member* RegisterMember(const std::string& id, const std::string& pw, const std::string& phone);
 
 private:
 	MemberRepository& repo_; // 회원 저장소 참조

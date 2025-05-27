@@ -1,4 +1,3 @@
-#pragma once
 #ifndef LOGIN_UI_H_
 #define LOGIN_UI_H_
 

@@ -20,7 +20,7 @@ public:
 	/**
 	 * @brief UI 실행 함수: 사용자 입력을 받아 control에 전달
 	 */
-	void start_interface(std::istream& in, std::ostream& out);
+	void start_interface(std::ostream& out);
 
 private:
 	RentedBikeControl* control_;  //control 참조 포인터

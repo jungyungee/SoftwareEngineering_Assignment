@@ -1,5 +1,4 @@
 #include "rented_bike.h"
-#include <string>
 #include <algorithm>
 
 // 생성자
@@ -7,27 +6,21 @@ RentedBikeControl::RentedBikeControl(BikeRepository& bike_repo, MemberRepository
     : bike_repo_(bike_repo), member_repo_(member_repo), session_(session) {
 }
 
-// 로그인된 회원의 대여 자전거 목록을 출력
-void RentedBikeControl::ShowRentedBikes(std::istream& in, std::ostream& out) {
-    SystemUser* user = session_.GetLoggedInUser();
-    Member* member = dynamic_cast<Member*>(user);
+// 대여 중인 자전거 리스트 불러오고, 정렬
+std::vector<Bike*> RentedBikeControl::GetRentedBikes() {
+	SystemUser* user = session_.GetLoggedInUser();
+	Member* member = dynamic_cast<Member*>(user);
+	if (!member) return {};
 
-    if (!member) {
-        return;  // 로그인된 회원이 아니면 종료
-    }
+	auto rented_ids = member->GetRentedList();
+	std::sort(rented_ids.begin(), rented_ids.end());
 
-    auto rented_list = member->GetRentedList();
-    if (rented_list.empty()) {
-        return;  // 대여중인 자전거가 없으면 종료
-    }
-
-    std::sort(rented_list.begin(), rented_list.end());
-
-    for (const auto& bike_id : rented_list) {
-        Bike* bike = bike_repo_.FindById(bike_id);
-        if (bike) {
-            out << "> " << bike->GetId() << " " << bike->GetBikeName() << "\n";
-        }
-    }
-    out << "\n";
+	std::vector<Bike*> rented_bikes;
+	for (const auto& id : rented_ids) {
+		Bike* bike = bike_repo_.FindById(id);
+		if (bike) {
+			rented_bikes.push_back(bike);
+		}
+	}
+	return rented_bikes;
 }

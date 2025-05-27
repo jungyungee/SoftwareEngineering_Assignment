@@ -3,16 +3,9 @@
 //생성자
 Register::Register(MemberRepository& repo) : repo_(repo) {}
 
-// 입력받은 정보로 회원을 생성하고 저장소에 추가, 결과 출력
-void Register::RegisterMember(std::istream& in, std::ostream& out) {
-    std::string id, password, phone_number;
-    in >> id >> password >> phone_number;
-
-    Member new_member(id, password, phone_number);
+// 입력받은 정보로 회원을 생성하고 저장소에 추가
+Member* Register::RegisterMember(const std::string& id, const std::string& pw, const std::string& phone) {
+    Member* new_member = new Member(id, pw, phone);
     repo_.AddMember(new_member);
-
-    out << "> " << new_member.GetId() << " "
-        << new_member.GetPassword() << " "
-        << new_member.GetPhoneNumber() << "\n"
-        << std::endl;
+    return new_member;
 }

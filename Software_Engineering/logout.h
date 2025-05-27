@@ -2,6 +2,7 @@
 #define LOGOUT_CONTROL_H_
 
 #include "session.h"
+#include "system_user.h"
 
 /**
  * @brief 로그아웃 처리를 담당하는 control 클래스
@@ -11,12 +12,12 @@ public:
 	/**
 	  * @brief 생성자
 	  */
-	LogoutControl(Session& session) : session_(session) {}
+	explicit LogoutControl(Session& session);
 
 	/**
 	 * @brief 현재 로그인된 사용자를 로그아웃 처리
 	 */
-	void Logout(std::ostream& out);
+	SystemUser* Logout();
 
 private:
 	Session& session_; //로그인 세션 이용

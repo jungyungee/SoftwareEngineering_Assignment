@@ -14,10 +14,10 @@ public:
 	/**
 	 * @brief 생성자
 	 */
-	explicit RegisterUI(Register* control) : control_(control) {}
+	explicit RegisterUI(Register* control);
 
 	/**
-	 * @brief UI 실행 함수: 입력을 받아 회원가입 처리
+	 * @brief UI 실행 함수: 입력을 받아 회원가입 처리,결과출력
 	 */
 	void start_interface(std::istream& in, std::ostream& out);
 
